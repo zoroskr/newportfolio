@@ -6,5 +6,7 @@ import solidJs from "@astrojs/solid-js";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind(), react(), solidJs()]
+  integrations: [tailwind(), react(), solidJs()],
+  site: 'https://zoroskr.github.io',
+  base: 'newportfolio',
 });
