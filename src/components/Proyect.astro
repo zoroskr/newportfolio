@@ -1,0 +1,114 @@
+---
+import { Image } from "astro:assets";
+
+const {
+  imgSrc,
+  title,
+  description,
+  invert,
+  tags = [],
+  githubShow,
+  githubLink,
+  proyectLink,
+} = Astro.props;
+const invertP = `${invert ? "invertR" : "invertL"}`;
+---
+
+<div
+  class="flex items-center justify-center md:h-96 md:m-8 overflow-hidden w-full h-full flex-col"
+>
+  <Image
+    src={imgSrc}
+    alt={title}
+    class={`rounded-t w-5/6 md:w-7/12 object-cover flex items-center justify-center md:absolute md:rounded ${invertP} `}
+    format="webp"
+    quality={"mid"}
+    loading="lazy"
+    aria-hidden={true}  />
+
+  <div
+    class={`flex flex-col justify-center items-center mt-2 static md:absolute md:left-0 h-auto md:w-full ${invertP} last:border-red-500`}
+  >
+    <h2 class={`text-3xl font-bold md:w-2/5 md:text-4xl ${invertP}`}>
+      {title}
+    </h2><p
+      class={`p-4 md:bg-[#8C1A6A] md:rounded-lg md:text-lg md:w-1/2 md:mt-3 font-bold md:text-white md:shadow-md md:shadow-gray-900 flex items-center justify-center break-all	`}
+    >
+      {description}
+    </p><ul
+      class={`flex flex-wrap gap-2 mt-3 md:w-2/5 md:mt-3 justify-center items-center p-2 md:pl-0 h-full ${invertP}`}
+    >
+      {
+        tags.map((tag) => (
+          <li class="bg-[#A657AE] p-1 rounded font-bold text-white text-sm">
+            {tag}
+          </li>
+        ))
+      }
+    </ul><div
+      class={`h-full flex gap-5 pt-4 md:w-2/5 mb-5 md:mb-0 ${invert ? "justify-end" : "justify-start"} md:pr-5`}
+    >
+      <a
+        class={`${githubShow ? "" : "hidden"}`}
+        href={githubLink}
+        target="_blank"
+        rel="noreferrer"
+        aria-label="github"
+        ><svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-10 w-10 transition duration-300 ease-in-out hover:scale-125 hover:text-[var(--bg-buttons)]"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          stroke-width="2"
+          stroke="currentColor"
+          fill="none"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+            d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"
+          ></path></svg
+        ></a
+      ><a href={proyectLink} target="_blank" rel="noreferrer" aria-label="web"
+        ><svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-10 w-10 transition duration-300 ease-in-out hover:scale-125 hover:text-[var(--bg-buttons)]"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          stroke-width="2"
+          stroke="currentColor"
+          fill="none"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><circle
+            cx="12"
+            cy="12"
+            r="9"></circle><line x1="3.6" y1="9" x2="20.4" y2="9"></line><line
+            x1="3.6"
+            y1="15"
+            x2="20.4"
+            y2="15"></line><path d="M11.5 3a17 17 0 0 0 0 18"></path><path
+            d="M12.5 3a17 17 0 0 1 0 18"></path></svg
+        ></a
+      >
+    </div>
+  </div>
+</div>
+
+<style>
+  @media (min-width: 768px) {
+    .invertR {
+      left: 0;
+      text-align: end;
+      align-items: end;
+      justify-content: end;
+    }
+    .invertL {
+      right: 0;
+      text-align: start;
+      align-items: start;
+      justify-content: start;
+    }
+  }
+</style>

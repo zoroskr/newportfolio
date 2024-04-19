@@ -1,0 +1,34 @@
+---
+import WodensecImg from "../images/wodensec.webp";
+import MincompsImg from "../images/mincomps.png";
+import { fade } from 'astro:transitions';
+
+
+import Proyect from "./Proyect.astro";
+---
+
+<section id="projects"
+  class="h-full max-w-5xl w-full flex flex-col justify-center relative border-t-2 gap-8 text-black dark:text-white p-8 border-black dark:border-white"
+>
+  <div class="flex justify-center items-center">
+    <h2 class="text-4xl font-bold">My projects</h2>
+  </div>
+    <Proyect
+      imgSrc={WodensecImg}
+      tags = {["Javascript", "HTML", "CSS"]}
+      title="Wodensec"
+      proyectLink="https://www.wodensec.com/"
+      invert={true}
+      description="Work on this project to fix and make some modifications. Add new sections, modify animations, fix bugs and change styles. All modifications were done in a github repository, which allowed my client to keep track of all changes."
+    />
+    <Proyect
+      imgSrc={MincompsImg}
+      tags = {["Astro", "React", "Tailwind CSS"]}
+      title="Mincomps"
+      invert={false}
+      githubShow={true}
+      githubLink="https://github.com/zoroskr/mincomps"
+      proyectLink="https://zoroskr.github.io/mincomps/"
+      description="This website was developed using Astro, React, and Tailwind CSS. The design and development was done entirely by myself. In the attached link you can see the project, in the repository is attached the url of the page."
+    />
+</section>

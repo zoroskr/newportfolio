@@ -1,0 +1,338 @@
+---
+
+---
+
+<nav
+  class="flex flex-col justify-center items-center w-full fixed top-0 transition-all z-50 bg-transparent text-black dark:text-white navbar"
+>
+  <div class="flex justify-center items-center w-full">
+    <div
+      class="flex justify-between items-center h-16 xl:max-w-5xl md:max-w-3xl max-w-56 w-full overflow-hidden"
+    >
+      <h2 class="lg:text-3xl text-2xl font-bold">felipef 🚀</h2>
+      <div class="hidden w-fit md:flex md:justify-end h-full">
+        <ul
+          class="gap-5 font-medium flex items-center justify-center h-full w-fit"
+        >
+          <li class="transition duration-300 ease-in-out hover:scale-110"><a href="#home">Home</a></li>
+          <li class="transition duration-300 ease-in-out hover:scale-110"><a href="#projects">Projects</a></li>
+          <li class="transition duration-300 ease-in-out hover:scale-110"><a href="#about-me">About me</a></li>
+          <li class="transition duration-300 ease-in-out hover:scale-110"><a href="#education">Education</a></li>
+          <li class="flex justify-center items-center w-auto">
+              <button id="themeToggleDark" aria-label="Toggle Dark Mode" class="hover:scale-110 transition duration-300 ease-in-out "
+                ><span class="text-3xl "
+                  ><svg
+                    class="flex justify-center items-center"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="icon icon-tabler icon-tabler-moon"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    stroke-width="2"
+                    stroke="currentColor"
+                    fill="none"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    ><path stroke="none" d="M0 0h24v24H0z" fill="none"
+                    ></path><path
+                      d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"
+                    ></path></svg
+                  ></span
+                ></button
+              >
+              <button aria-label="Toggle Dark Mode" id="themeToggleLight" class="hover:scale-110 transition duration-300 ease-in-out "
+                ><span class="text-3xl "
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="icon icon-tabler icon-tabler-sun-high"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    stroke-width="2"
+                    stroke="currentColor"
+                    fill="none"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    ><path stroke="none" d="M0 0h24v24H0z" fill="none"
+                    ></path><path
+                      d="M14.828 14.828a4 4 0 1 0 -5.656 -5.656a4 4 0 0 0 5.656 5.656z"
+                    ></path><path d="M6.343 17.657l-1.414 1.414"></path><path
+                      d="M6.343 6.343l-1.414 -1.414"></path><path
+                      d="M17.657 6.343l1.414 -1.414"></path><path
+                      d="M17.657 17.657l1.414 1.414"></path><path d="M4 12h-2"
+                    ></path><path d="M12 4v-2"></path><path d="M20 12h2"
+                    ></path><path d="M12 20v2"></path></svg
+                  ></span
+                ></button
+              >
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div
+      class="flex flex-col-reverse relative justify-center items-center h-full"
+    >
+      <button
+        data-collapse-toggle="navbar-default"
+        type="button"
+        class="h-10 w-10 rounded-lg flex items-center justify-center hover:ring-2 hover:ring-[var(--text-nav)] transition-all duration-300 focus:outline-none md:hidden"
+        aria-controls="navbar-default"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+        ><svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="w-10 h-10"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          stroke-width="2"
+          stroke="currentColor"
+          fill="none"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><line
+            x1="4"
+            y1="6"
+            x2="20"
+            y2="6"></line><line x1="4" y1="12" x2="20" y2="12"></line><line
+            x1="4"
+            y1="18"
+            x2="20"
+            y2="18"></line></svg
+        ></button
+      >
+    </div>
+  </div>
+  <div
+    class="w-full h-full right-36 flex justify-center items-center bg-gray-300 dark:bg-gray-800 md:hidden"
+    id="nav-ocult"
+    role="menu"
+    aria-orientation="vertical"
+    aria-labelledby="user-menu-button"
+    style="box-shadow:0px 15px 10px -15px var(--nav-shadow)"
+    tabindex="-1"
+    id="navbar-mobile"
+  >
+    <ul
+      class="flex flex-col p-4 text-xl gap-4 w-full justify-center items-center"
+    >
+      <a
+        href="#sobreMi"
+        class="text-bold hover:bg-[var(--hover-nav)] w-full h-10 flex justify-start items-center"
+        ><li>Sobre mí</li></a
+      ><a
+        href="#misProyectos"
+        class="text-bold hover:bg-[var(--hover-nav)] w-full h-10 flex justify-start items-center"
+        ><li>Mis proyectos</li></a
+      ><a
+        href="#contactame"
+        class="text-bold hover:bg-[var(--hover-nav)] w-full h-10 flex justify-start items-center"
+        ><li>Contáctame</li></a
+      >
+      <li class="flex justify-start items-start w-full h-10">
+        <button id="themeToggleDarkMenu" aria-label="Toggle Dark Mode" class="hover:scale-110 transition duration-300 ease-in-out "
+          ><span class="text-3xl "
+            ><svg
+              class="flex justify-center items-center"
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon icon-tabler icon-tabler-moon"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              stroke-width="2"
+              stroke="currentColor"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              ><path stroke="none" d="M0 0h24v24H0z" fill="none"
+              ></path><path
+                d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"
+              ></path></svg
+            ></span
+          ></button
+        >
+        <button aria-label="Toggle Dark Mode" id="themeToggleLightMenu" class="hover:scale-110 transition duration-300 ease-in-out "
+          ><span class="text-3xl "
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon icon-tabler icon-tabler-sun-high"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              stroke-width="2"
+              stroke="currentColor"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              ><path stroke="none" d="M0 0h24v24H0z" fill="none"
+              ></path><path
+                d="M14.828 14.828a4 4 0 1 0 -5.656 -5.656a4 4 0 0 0 5.656 5.656z"
+              ></path><path d="M6.343 17.657l-1.414 1.414"></path><path
+                d="M6.343 6.343l-1.414 -1.414"></path><path
+                d="M17.657 6.343l1.414 -1.414"></path><path
+                d="M17.657 17.657l1.414 1.414"></path><path d="M4 12h-2"
+              ></path><path d="M12 4v-2"></path><path d="M20 12h2"
+              ></path><path d="M12 20v2"></path></svg
+            ></span
+          ></button
+        >
+    </li>
+    </ul>
+  </div>
+</nav>
+
+<script is:inline>
+  const theme = (() => {
+    if (typeof localStorage !== "undefined" && localStorage.getItem("theme")) {
+      return localStorage.getItem("theme");
+    }
+    if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+      return "dark";
+    }
+    return "light";
+  })();
+
+  if (theme === "light") {
+    document.documentElement.classList.remove("dark");
+  } else {
+    document.documentElement.classList.add("dark");
+  }
+
+  window.localStorage.setItem("theme", theme);
+
+  window.addEventListener('DOMContentLoaded', (event) => {
+  const currentTheme = localStorage.getItem("theme");
+  const buttonDark = document.getElementById("themeToggleDark");
+  const buttonLight = document.getElementById("themeToggleLight");
+
+  const buttonDarkMenu = document.getElementById("themeToggleDarkMenu");
+  const buttonLightMenu = document.getElementById("themeToggleLightMenu");
+
+  if (currentTheme === "dark") {
+    buttonDark.hidden = true;
+    buttonDarkMenu.hidden = true;
+    buttonLight.hidden = false;
+    buttonLightMenu.hidden = false;
+  } else {
+    buttonDark.hidden = false;
+    buttonDarkMenu.hidden = false;
+    buttonLight.hidden = true;
+    buttonLightMenu.hidden = true;
+
+  }
+});
+
+const handleDarkToggleClick = () => {
+  const element = document.documentElement;
+  element.classList.add("dark");
+  localStorage.setItem("theme", "dark");
+
+  const buttonDark = document.getElementById("themeToggleDark");
+  const buttonDarkMenu = document.getElementById("themeToggleDarkMenu");
+  buttonDarkMenu.hidden = true;
+  buttonDark.hidden = true;
+
+  const buttonLight = document.getElementById("themeToggleLight");
+  const buttonLightMenu = document.getElementById("themeToggleLightMenu");
+  buttonLightMenu.hidden = false;
+  buttonLight.hidden = false;
+};
+
+const handleLightToggleClick = () => {
+  const element = document.documentElement;
+  element.classList.remove("dark");
+  localStorage.setItem("theme", "light");
+
+  const buttonLight = document.getElementById("themeToggleLight");
+  const buttonLightMenu = document.getElementById("themeToggleLightMenu");
+  buttonLightMenu.hidden = true;
+  buttonLight.hidden = true;
+
+  const buttonDark = document.getElementById("themeToggleDark");
+  const buttonDarkMenu = document.getElementById("themeToggleDarkMenu");
+  buttonDarkMenu.hidden = false;
+  buttonDark.hidden = false;
+};
+
+document
+  .getElementById("themeToggleDark")
+  .addEventListener("click", handleDarkToggleClick);
+document
+  .getElementById("themeToggleDarkMenu")
+  .addEventListener("click", handleDarkToggleClick);
+
+document
+  .getElementById("themeToggleLight")
+  .addEventListener("click", handleLightToggleClick);
+document
+  .getElementById("themeToggleLightMenu")
+  .addEventListener("click", handleLightToggleClick);
+
+
+  window.addEventListener("scroll", () => {
+    const navbar = document.querySelector("nav");
+    if (window.scrollY > 0) {
+      navbar.classList.add("scrolled");
+    } else {
+      navbar.classList.remove("scrolled");
+    }
+  });
+
+  document
+    .querySelector('[data-collapse-toggle="navbar-default"]')
+    .addEventListener("click", (event) => {
+      event.stopPropagation();
+      const ul = document.querySelector("#nav-ocult");
+      ul.classList.toggle("show");
+      console.log(ul);
+    });
+
+  document.querySelector("#nav-ocult").addEventListener("click", (event) => {
+    event.stopPropagation();
+  });
+
+  document.addEventListener("click", () => {
+    const ul = document.querySelector("#nav-ocult");
+    ul.classList.remove("show");
+  });
+
+  document.addEventListener("DOMContentLoaded", (event) => {
+    const links = document.querySelectorAll("li a"); // Selecciona todos los enlaces
+
+    links.forEach((link) => {
+      link.addEventListener("click", (event) => {
+        event.preventDefault(); // Previene el comportamiento de desplazamiento predeterminado
+
+        const targetId = event.target.getAttribute("href"); // Obtiene el ID de la sección objetivo
+        const targetSection = document.querySelector(targetId); // Selecciona la sección objetivo
+
+        // Desplaza a la sección objetivo, ajustando la posición de desplazamiento
+        targetSection.scrollIntoView({
+          behavior: "smooth",
+          block: "start"
+        });
+
+        // Si la sección objetivo tiene la clase "active", desplaza la vista 200px hacia arriba
+        // Si no, no desplaza la vista
+        const offset = targetSection.classList.contains("active") ? -64 : -200;
+        window.scrollBy(0, offset);
+      });
+    });
+  });
+</script>
+
+<style>
+  .navbar.scrolled {
+    @apply bg-gray-300;
+    @apply dark:bg-gray-800;
+    @apply shadow-2xl;
+  }
+
+  #nav-ocult {
+    display: none;
+  }
+
+  #nav-ocult.show {
+    display: block;
+  }
+</style>

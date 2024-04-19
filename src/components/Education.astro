@@ -1,0 +1,31 @@
+---
+import Timelapse from "./Timelapse.astro";
+---
+
+<section
+  id="education"
+  class="h-full max-w-5xl w-full flex flex-col justify-center items-center border-t-2 text-black dark:text-white p-8 gap-8 border-black dark:border-white"
+>
+  <h2 class="text-4xl font-bold">Education 🎓</h2>
+
+  <div class="flex flex-col justify-center items-center w-full">
+    <Timelapse
+      title="UNLP Informatica"
+      description="Bachelor's Degree in Systems"
+      lapse="March 2021 - Current"
+      invert={false}
+    />
+    <Timelapse
+      title="UNLP Informatica"
+      description="University Programmer Analyst"
+      lapse="March 2021 - March 2025 (estimated completion date)"
+      invert={true}
+    />
+    <Timelapse
+      title="Sagrado Corazon"
+      description="High School Education"
+      lapse="March 2014 - December 2020"
+      invert={false}
+    />
+  </div>
+</section>
