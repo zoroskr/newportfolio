@@ -1,4 +1,5 @@
 ---
+import ImageIcon from "../images/bx-code-alt.svg";
 import { ViewTransitions } from "astro:transitions";
 
 interface Props {
@@ -11,12 +12,24 @@ const { title } = Astro.props;
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="description" content="Astro description" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>Felipe Fidalgo - Full Stack Developer 🚀</title>
+		<meta name="title" content="Felipe Fidalgo - Full Stack Developer 🚀" />
+		<meta name="description" content="This is my personal portfolio, I hope you like it :) " />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://zoroskr.github.io/portfolio" />
+		<meta property="og:title" content="Felipe Fidalgo - Full Stack Developer 🚀" />
+		<meta property="og:description" content="This is my personal portfolio, I hope you like it :) " />
+		<meta property="og:image" content={ImageIcon.src}  />
+		<meta property="twitter:card" content="summary_large_image" />
+		<meta property="twitter:url" content="https://zoroskr.github.io/portfolio/" />
+		<meta property="twitter:title" content="Felipe Fidalgo - Full Stack Developer 🚀" />
+		<meta property="twitter:description" content="This is my personal portfolio, I hope you like it :) " />
+		<meta property="twitter:image" content={ImageIcon.src}  />
+		<link rel="icon" href={ImageIcon.src} />
+
+    <!-- Meta Tags Generated with https://metatags.io -->
     <ViewTransitions />
   </head>
   <body class="bg-white dark:bg-[#0000]">
