@@ -4174,36 +4174,8 @@ const { title } = Astro.props;
         }
       }
 
-      @media (min-width: 768px) {
-        section:not(:first-of-type) {
-          position: relative;
-          transform: translateY(150px);
-          opacity: 0;
-          transition: all 1s ease;
-        }
 
-        section:not(:first-of-type).active {
-          transform: translateY(0px);
-          opacity: 1;
-        }
-      }
     </style>
-    <script>
-      window.addEventListener("scroll", reveal);
-      function reveal() {
-        var reveals = document.querySelectorAll("section");
 
-        for (var i = 0; i < reveals.length; i++) {
-          var windowHeiight = window.innerHeight;
-          var revealTop = reveals[i].getBoundingClientRect().top;
-          var revealPoint = 0;
-          if (revealTop < windowHeiight + revealPoint) {
-            reveals[i].classList.add("active");
-          } else {
-            reveals[i].classList.remove("active");
-          }
-        }
-      }
-    </script>
   </body>
 </html>
